@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+ daas-video:
+  container_name: daas-video
+  build: .
+  ports:
+  - "8000:5000"

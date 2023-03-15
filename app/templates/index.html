@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaaS-video</video></title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <script src="../static/js/app.js" defer></script>
+    <script src="../static/js/response.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header"> <h1> DaaS Video - Argument map {{ mapID }}</h1></div>
+        <div class="main">
+            <div class="videocontainer">
+                <div class="video-content">
+                    <video id="videoID" class="video-js vjs-big-play-centered vjs-default-skin.vjs-user-inactive vjs-control-bar" controls="controls" preload="auto" data-setup="{}" 
+                    height="400px">
+                
+                        <!--source src="https://dmail-my.sharepoint.com/:v:/r/personal/dzografistou001_dundee_ac_uk/Documents/Serapis/U85/RedTeaming%20videos/221005-RedTeam-NASA_MoonSurvival-part1.mp4"
+                                type="video/mp4"-->
+                        <source src= "{{ video_url }}"
+                                type="video/mp4">
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video>
+                </div>
+                <!--p id='currTimeID'>
+                    Show the timestamp here
+                </p-->
+            </div>
+            <div class="chatcontainer">
+               
+                <div class="chat-header"> 
+                    <div class="title">  Dialogue Stream </div>
+                </div>
+                <div class="chat-body"> </div>
+                <!--div class="chat-input">
+                    <div class="input-sec">
+                        <input type="text" id="txtInput" autofocus placeholder="Type here">
+                    </div>
+                    <div class="send">
+                        <img src="images/send.png" alt="send" id="sendImgID">
+                    </div>
+                </div-->
+            
+            </div>
+        </div>
+        <div class="copyright"></div>
+    </div>
+
+<script>
+    var locutions = {{ locutions | tojson }};
+    console.log(locutions);
+    var prompts = {{ prompts | tojson }};
+    console.log(prompts);
+
+    
+
+    
+</script>
+
+
+<script src="https://vjs.zencdn.net/7.20.3/video.min.js"> </script>
+
+<script src="../static/js/video_mngm.js"></script>
+</body>
+</html>

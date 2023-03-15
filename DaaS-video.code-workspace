@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../chatbot"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DaaS-video"
+	}
+}
