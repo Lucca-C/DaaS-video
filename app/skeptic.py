@@ -46,7 +46,6 @@ class Skeptic:
                     swapped = True
             
             if not swapped:
-                print('No swaps required!')
                 return
     
 
