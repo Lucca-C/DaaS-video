@@ -4,7 +4,7 @@ class Skeptic:
 
     def generate_interventions(self, data):
 
-        print('===================================')
+       
         prompts = dict()
 
         skeptic = data['Skeptic']
@@ -30,7 +30,6 @@ class Skeptic:
                     prompts[nodeID] = []
                     prompts[nodeID].append(prompt_tuple)
         
-        print(prompts)
         return prompts, locutions
 
 
