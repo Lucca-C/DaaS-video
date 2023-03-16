@@ -1,7 +1,7 @@
 const chatBody = document.querySelector(".chat-body");
 
 
-const renderUserMessage = () => {
+/*const renderUserMessage = () => {
     const userInput = txtInput.value;
     renderMessageEle(userInput, "user");
     txtInput.value = '';
@@ -12,7 +12,7 @@ const renderUserMessage = () => {
 const renderChatbotResponse = (userInput) => {
     const res = getChatbotResponse(userInput);
     renderMessageEle(res);
-}
+}*/
 
 const renderMessageEle = (txt, type) => {
     let className = "user-message";
@@ -32,12 +32,12 @@ const renderMessageEle = (txt, type) => {
     chatBody.scrollTop = chatBody.scrollHeight;
 }
 
-const getChatbotResponse = (userInput) => {
+/*const getChatbotResponse = (userInput) => {
     return responseObj[userInput] == undefined ? "Please try something else" : responseObj[userInput];
-}
+}*/
 
-const secScrollPosition = () => {
+/*const secScrollPosition = () => {
     if (chatBody.scrollHeight > 0) {
         chatBody.scrollTop = chatBody.scrollHeight;
     }
-}
+}*/
