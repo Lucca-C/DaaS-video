@@ -16,8 +16,14 @@ def index():
 
 @application.route('/video', methods=['GET', 'POST'])
 def daas_video():
-    mapID = request.args.get('mapID')
+     mapID = request.args.get('mapID')
     video_url = request.args.get('video_url')
+
+    if not mapID:
+        print("mapID is empty")
+        return "mapID not provided", 400
+
+    print("mapID is not empty")
     
     data = requests.get(json_url(mapID)).text
 
