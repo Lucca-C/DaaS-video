@@ -7,4 +7,4 @@ services:
     ports:
       - "8000:5000"
     volumes:
-      - /home/luccax/repos/arg-tech/DaaS-video:/app
+      - /home/luccax/university/arg-tech/DaaS-video:/app
