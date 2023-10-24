@@ -8,6 +8,10 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "DaaS-video"
+		"liveServer.settings.multiRootWorkspaceName": "DaaS-video",
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter"
+		},
+		"python.formatting.provider": "none"
 	}
 }
