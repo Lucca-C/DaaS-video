@@ -17,11 +17,11 @@ const renderChatbotResponse = (userInput) => {
 const renderMessageEle = (txt, type) => {
     let className = "user-message";
     if (type != 'user') {
-        if(type == 'acceptability')
+        if (type == 'acceptability')
             className = "acceptability-agent";
-        if(type == 'justification')
+        if (type == 'justification')
             className = "justification-agent";
-        if(type == 'debias')
+        if (type == 'debias')
             className = "debias-agent";
     }
     const messageEle = document.createElement("div");
