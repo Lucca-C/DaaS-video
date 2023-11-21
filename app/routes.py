@@ -5,10 +5,32 @@ import os
 from . import application
 from app.skeptic import Skeptic
 import json
+from moviepy import VideoFileClip
 
 application.config[
     "DATA_FOLDER"
 ] = "data/"  # Configuration for flask from data/26171_xaif.json
+
+# ----- ENDPOINTS -----
+
+@application.route('/audio/<filename>', methods=['GET'])
+def get_audio(filename):
+    # Ensure the filename is secure to prevent directory traversal attacks
+    filename = secure_filename(filename)
+    # Serve the audio file from a directory (adjust the 'audio_files' directory as necessary)
+    return send_from_directory(os.path.join(application.root_path, 'static', 'audio_files'), filename)
+
+# Endpoint to receive a timestamp and return the dialogue data
+@application.route('/dialogue', methods=['POST'])
+def get_dialogue():
+    data = request.get_json()
+    timestamp = data.get('timestamp')
+    # You'll need to implement the logic to find the dialogue data based on the timestamp
+    # For now, we'll just return a mock response
+    dialogue_data = {'dialogue': 'Sample dialogue for timestamp {}'.format(timestamp)}
+    return jsonify(dialogue_data)
+
+
 
 
 # ----- METHODS ------
